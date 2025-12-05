@@ -20,6 +20,15 @@ ol[role='list'] {
   list-style: none;
 }
 
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -35,8 +44,8 @@ h3, h4 {
   text-wrap: balance;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
   color: currentColor;
 }
 

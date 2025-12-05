@@ -1,5 +1,5 @@
 import "../public/css/zero-style.css";
-import "../public/css/default-style.css";
+import "../public/css/style.css";
 
 export default function RootLayout({
   children,
