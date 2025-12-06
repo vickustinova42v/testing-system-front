@@ -1,4 +1,4 @@
-import Header from "@/public/components/header";
+import Header from "@/components/header";
 
 export default function Tests() {
   return (

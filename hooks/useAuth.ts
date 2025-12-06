@@ -4,19 +4,24 @@ import { useEffect, useState } from "react";
 import { apiGet } from "../lib/api";
 
 export function useAuth() {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function check() {
-            const res = await apiGet("/auth/me");
+            try {
+                const res = await apiGet("/auth/me");
 
-            if (res.ok) {
-                const data = await res.json();
-                setUser(data);
-            } else {
+                if (res.ok) {
+                    const data = await res.json();
+                    setUser(data);
+                } else {
+                    setUser(null);
+                }
+            } catch {
                 setUser(null);
             }
+
             setLoading(false);
         }
 
