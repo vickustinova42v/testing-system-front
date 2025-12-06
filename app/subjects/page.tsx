@@ -16,9 +16,23 @@ export default function Subjects() {
         <>
             <Header />
             <div className="main-background text-white" style={{ padding: "30px" }}>
-                <h1 style={{ marginBottom: "20px" }}>Предметы</h1>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <h1>Предметы</h1>
 
-                <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                    <Link
+                        href="/subjects/create"
+                        style={{
+                            padding: "10px 20px",
+                            background: "var(--blue)",
+                            borderRadius: "var(--radius)",
+                            fontWeight: "bold",
+                        }}
+                    >
+                        Создать предмет
+                    </Link>
+                </div>
+
+                <ul style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "20px" }}>
                     {subjects.map((s: any) => (
                         <li key={s.id}>
                             <Link

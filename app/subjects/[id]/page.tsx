@@ -4,6 +4,7 @@ import { use } from "react";
 import { useEffect, useState } from "react";
 import Header from "@/components/header";
 import { getQuestions } from "@/lib/getQuestions";
+import Link from "next/link";
 
 export default function SubjectQuestionsPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params); // ← правильное получение params
@@ -57,6 +58,21 @@ export default function SubjectQuestionsPage({ params }: { params: Promise<{ id:
                     ))}
                 </ul>
             </div>
+            <Link
+                href={`/subjects/${subjectId}/tests`}
+                style={{
+                    display: "inline-block",
+                    marginTop: "20px",
+                    padding: "12px 18px",
+                    background: "var(--blue)",
+                    borderRadius: "var(--radius)",
+                    fontWeight: "var(--bold)",
+                    color: "white",
+                }}
+            >
+                Тесты
+            </Link>
+
         </>
     );
 }

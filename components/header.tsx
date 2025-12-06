@@ -14,7 +14,9 @@ export default function Header() {
 
                         <li><Link href="/profile">Профиль</Link></li>
                         {(user?.role === 'Преподаватель' || user?.role === 'Студент' || user?.role === 'Администратор') && (
-                            <li><Link href="/subjects">Предметы</Link></li>
+                            <>
+                                <li><Link href="/subjects">Предметы</Link></li>
+                            </>
                         )}
                         {user?.role === 'Администратор' && (
                             <li><Link href="/users">Пользователи</Link></li>
