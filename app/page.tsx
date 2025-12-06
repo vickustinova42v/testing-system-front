@@ -6,7 +6,7 @@ export default function Home() {
       <h1>
         Система тестирования студентов
       </h1>
-      <Link href='/auth'>Войти</Link>
+      <Link href='/login'>Войти</Link>
       <Link href='/register'>Зарегистрироваться</Link>
     </main>
   );
