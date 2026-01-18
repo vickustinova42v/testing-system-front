@@ -1,4 +1,4 @@
-const BASIC_PATH = 'http://localhost:8080';
+const BASIC_PATH = 'http://localhost:8080/api';
 
 export async function apiGet(path: string) {
     return fetch(`${BASIC_PATH}${path}`, {

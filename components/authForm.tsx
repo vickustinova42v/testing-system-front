@@ -18,8 +18,8 @@ export default function AuthForm(props: IAuthForm) {
         e.preventDefault();
 
         const url = props.isRegister
-        ? "http://localhost:8080/auth/register"
-        : "http://localhost:8080/auth/login";
+        ? "http://localhost:8080/api/auth/register"
+        : "http://localhost:8080/api/auth/login";
 
         const body = props.isRegister
         ? { lastName, firstName, fathersName, email, password }
